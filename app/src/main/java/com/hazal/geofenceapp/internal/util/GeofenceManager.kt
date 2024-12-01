@@ -1,4 +1,4 @@
-package com.example.geofenceapp.internal.util
+package com.hazal.geofenceapp.internal.util
 
 import android.annotation.SuppressLint
 import android.app.PendingIntent
@@ -16,9 +16,9 @@ import kotlinx.coroutines.tasks.await
 class GeofenceManager(context: Context) {
     private val TAG = "GeofenceManager"
     private val client = LocationServices.getGeofencingClient(context)
-    val geofenceList = mutableMapOf<String, Geofence>()
+    private val geofenceList = mutableMapOf<String, Geofence>()
 
-    val intent = Intent(context, GeofenceBroadcastReceiver::class.java)
+    private val intent = Intent(context, GeofenceBroadcastReceiver::class.java)
 
     private val geofencingPendingIntent by lazy {
         PendingIntent.getBroadcast(

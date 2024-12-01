@@ -1,4 +1,4 @@
-package com.example.geofenceapp.data
+package com.hazal.geofenceapp.data
 
 data class GeofenceLocation(
     val name: String,

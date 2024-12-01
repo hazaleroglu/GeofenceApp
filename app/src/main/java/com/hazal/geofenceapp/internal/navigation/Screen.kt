@@ -1,4 +1,4 @@
-package com.example.geofenceapp.internal.navigation
+package com.hazal.geofenceapp.internal.navigation
 
 import androidx.navigation.NamedNavArgument
 

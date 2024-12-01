@@ -1,4 +1,4 @@
-package com.example.geofenceapp
+package com.hazal.geofenceapp
 
 import org.junit.Test
 

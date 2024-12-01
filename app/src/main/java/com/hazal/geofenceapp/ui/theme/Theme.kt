@@ -1,4 +1,4 @@
-package com.example.geofenceapp.ui.theme
+package com.hazal.geofenceapp.ui.theme
 
 import android.app.Activity
 import android.os.Build

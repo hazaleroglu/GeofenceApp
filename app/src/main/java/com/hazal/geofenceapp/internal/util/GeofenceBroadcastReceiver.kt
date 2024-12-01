@@ -1,17 +1,15 @@
-package com.example.geofenceapp.internal.util
+package com.hazal.geofenceapp.internal.util
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import com.example.geofenceapp.ui.screens.home.GeofenceViewModel
 import com.google.android.gms.location.Geofence
 import com.google.android.gms.location.GeofencingEvent
 
 class GeofenceBroadcastReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        val viewModel = GeofenceViewModel()
-            viewModel.updateInfoText("Geofence event occurred!")
+        Log.d("hazal", "broadcast")
         if (intent != null && intent.action == ACTION_GEOFENCE_EVENT) {
             val geofencingEvent = GeofencingEvent.fromIntent(intent)
             if (geofencingEvent != null && context != null){

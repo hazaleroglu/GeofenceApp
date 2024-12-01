@@ -1,4 +1,4 @@
-package com.example.geofenceapp.ui
+package com.hazal.geofenceapp.ui
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -10,9 +10,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.geofenceapp.internal.navigation.Screen
-import com.example.geofenceapp.ui.screens.home.HomeScreen
-import com.example.geofenceapp.ui.theme.GeofenceAppTheme
+import com.hazal.geofenceapp.internal.navigation.Screen
+import com.hazal.geofenceapp.ui.screens.home.HomeScreen
+import com.hazal.geofenceapp.ui.theme.GeofenceAppTheme
 
 @Composable
 fun GeofenceApp(startDestination: String) {

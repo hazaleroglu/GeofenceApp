@@ -1,4 +1,4 @@
-package com.example.geofenceapp.internal.util
+package com.hazal.geofenceapp.internal.util
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

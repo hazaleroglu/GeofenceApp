@@ -1,4 +1,4 @@
-package com.example.geofenceapp.ui
+package com.hazal.geofenceapp.ui
 
 import android.graphics.Color
 import android.os.Bundle
@@ -11,7 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.core.view.WindowCompat
-import com.example.geofenceapp.ui.screens.splash.SplashScreenViewModel
+import com.hazal.geofenceapp.internal.util.RequestLocationPermissions
+import com.hazal.geofenceapp.ui.screens.splash.SplashScreenViewModel
 
 class MainActivity : ComponentActivity() {
 
@@ -49,6 +50,7 @@ fun GeofenceContent(
     val continueState by splashViewModel.onContinue.collectAsState()
 
     splashViewModel.ShowNotificationPermission()
+    RequestLocationPermissions()
     if (continueState) {
         onAppReady(startDestination)
     }

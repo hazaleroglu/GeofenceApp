@@ -1,4 +1,4 @@
-package com.example.geofenceapp.ui.screens.home
+package com.hazal.geofenceapp.ui.screens.home
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

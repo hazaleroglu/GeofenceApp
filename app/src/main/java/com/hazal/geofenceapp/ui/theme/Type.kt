@@ -1,4 +1,4 @@
-package com.example.geofenceapp.ui.theme
+package com.hazal.geofenceapp.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

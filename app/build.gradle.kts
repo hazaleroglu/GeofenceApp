@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.geofenceapp"
+    namespace = "com.hazal.geofenceapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.geofenceapp"
+        applicationId = "com.hazal.geofenceapp"
         minSdk = 33
         targetSdk = 34
         versionCode = 1
