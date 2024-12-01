@@ -2,6 +2,7 @@ package com.hazal.geofenceapp.ui.screens.home
 
 import android.content.Context
 import android.location.Location
+import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
@@ -39,11 +40,11 @@ fun HomeScreen(viewModel: GeofenceViewModel = viewModel() ) {
 @Composable
 private fun ShowMap(geofenceManager: GeofenceManager, context: Context) {
     val geofenceLocations = remember { mutableStateListOf<GeofenceLocation>() }
-    geofenceLocations.add(GeofenceLocation("Home", 37.7749, -122.4194, 100f))
-    geofenceLocations.add(GeofenceLocation("Office", 37.7849, -122.4094, 150f))
+//    geofenceLocations.add(GeofenceLocation("Home", 37.7749, -122.4194, 100f))
+//    geofenceLocations.add(GeofenceLocation("Office", 37.7849, -122.4094, 150f))
 
     val cameraPositionState = rememberCameraPositionState {
-        position = CameraPosition.fromLatLngZoom(LatLng(37.7749, -122.4194), 12f)
+        position = CameraPosition.fromLatLngZoom(LatLng(40.949802, 29.173951), 14f)
     }
 
     GoogleMap(
@@ -65,7 +66,7 @@ private fun ShowMap(geofenceManager: GeofenceManager, context: Context) {
             geofenceManager.registerGeofence()
 
             Toast.makeText(context, "Geofence Added at ${latLng.latitude}, ${latLng.longitude}", Toast.LENGTH_SHORT).show()
-
+            Log.d("osman", "${latLng.latitude}, ${latLng.longitude}")
             geofenceLocations.add(GeofenceLocation(key, location.latitude, location.longitude, 100f))
         }
     ) {

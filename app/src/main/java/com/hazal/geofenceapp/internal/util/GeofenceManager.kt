@@ -18,12 +18,12 @@ class GeofenceManager(context: Context) {
     private val client = LocationServices.getGeofencingClient(context)
     private val geofenceList = mutableMapOf<String, Geofence>()
 
-    private val intent = Intent(context, GeofenceBroadcastReceiver::class.java)
+    private val geofencingPendingIntent: PendingIntent  by lazy {
+        val intent = Intent(context, GeofenceBroadcastReceiver::class.java)
 
-    private val geofencingPendingIntent by lazy {
         PendingIntent.getBroadcast(
             context,
-            CUSTOM_REQUEST_CODE_GEOFENCE,
+            0,
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
@@ -59,7 +59,7 @@ class GeofenceManager(context: Context) {
 
     private fun createGeofencingRequest(): GeofencingRequest {
         return GeofencingRequest.Builder().apply {
-            setInitialTrigger(GEOFENCE_TRANSITION_ENTER)
+            setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER)
             addGeofences(geofenceList.values.toList())
         }.build()
     }
