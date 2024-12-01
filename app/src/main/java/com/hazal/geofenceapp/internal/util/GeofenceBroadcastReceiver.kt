@@ -21,7 +21,6 @@ class GeofenceBroadcastReceiver : BroadcastReceiver() {
                 val transitionType = geofencingEvent.geofenceTransition
                 val locationName = geofencingEvent.triggeringGeofences?.firstOrNull()?.requestId
 
-                // Geofence olayını yönetin
                 if (transitionType == Geofence.GEOFENCE_TRANSITION_ENTER) {
                     Log.d("Geofence", "Entered: $locationName")
                     showNotification(context, "Geofence Entered", "Exited $locationName")

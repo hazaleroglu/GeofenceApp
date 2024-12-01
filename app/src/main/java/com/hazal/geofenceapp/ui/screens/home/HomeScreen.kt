@@ -14,8 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.hazal.geofenceapp.data.GeofenceLocation
-import com.hazal.geofenceapp.internal.util.GeofenceManager
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.Circle
@@ -24,6 +22,8 @@ import com.google.maps.android.compose.MapProperties
 import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.MarkerState
 import com.google.maps.android.compose.rememberCameraPositionState
+import com.hazal.geofenceapp.data.GeofenceLocation
+import com.hazal.geofenceapp.internal.util.GeofenceManager
 
 @Composable
 fun HomeScreen(viewModel: GeofenceViewModel = viewModel() ) {
